@@ -260,7 +260,7 @@ button {
 .add-to-cart {
   display: none;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -270,6 +270,7 @@ button {
   border: 2px solid white;
   z-index: 2;
 }
+
 
 .product:hover .add-to-cart {
   display: flex;
@@ -347,15 +348,14 @@ html, body {
 }
 
 .fone {
+  background-color: #222222;
+  width: 1600px;
+  height: 315px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 1600px;
-  height: 341px;
-  background: rgb(34, 34, 36);
-  padding: 236px 104px;
-  box-sizing: border-box;
+  gap: 30px;
 }
 
 .text_mini {
@@ -363,14 +363,15 @@ html, body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 33%;
+  width: 30%;
   max-width: 360px;
+  padding: 14px;
 }
 
 .image_mini {
-  width: 44.99px;
+  width: 39.99px;
   height: auto;
-  padding: 8px;
+  padding: 14px;
 }
 
 .content_mini {
@@ -384,17 +385,152 @@ html, body {
 }
 
 .content_text_mini {
-  font-size: 19.96px;
+  font-style: normal;
   font-weight: 400;
+  font-size: 20px;
   line-height: 24px;
+  color: #FBFBFB;
 }
 
 .paragraph_mini {
-  font-size: 13.97px;
+  font-style: normal;
   font-weight: 300;
+  font-size: 13.97px;
   line-height: 17px;
   text-align: center;
+  letter-spacing: 0%;
+  color: #FBFBFB;
 }
+
+
+.subscribe_info {
+  position: relative;
+}
+
+.sub__img {
+  position: absolute;
+  width: 1598px;
+  height: 448px;
+  left: 2px;
+  top: 0;
+}
+
+.sub__img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.face_img {
+position: absolute;
+width: 96px;
+height: auto;
+left:91px;
+top: -140px;
+}
+
+.sub_txt{
+  color: rgb(34, 34, 36);
+  font-family: Lato;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+
+}
+
+.subscribe_text {
+  position: absolute;
+  width: 279.45px;
+  height: 99px;
+  left: 230.29px;
+  top: 223px;
+  }
+
+.sub_email {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.sub_email h3{
+  color: rgb(34, 34, 36);
+font-family: Lato;
+font-size: 24px;
+font-weight: 700;
+line-height: 167.2%;
+letter-spacing: 0%;
+text-align: center;
+
+
+}
+
+.sub_email p{
+  color: rgb(34, 34, 36);
+font-family: Lato;
+font-size: 18px;
+font-weight: 400;
+line-height: 167.2%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+.email {
+  color: rgb(34, 34, 36);
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 167.2%;
+  letter-spacing: 0%;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.input {
+  margin-bottom: 10px;
+}
+
+
+.input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.sub_button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(34, 34, 36);
+  color: rgb(255, 255, 255);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .right_title {
