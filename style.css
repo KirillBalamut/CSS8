@@ -227,29 +227,71 @@ button {
 
 .product {
   position: relative;
+  overflow: hidden;
 }
 
 .product__img {
   width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.image_affect{
+    position: relative;
+    overflow: hidden;
+}
+
+.image_affect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(58, 56, 56, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.image_affect:hover::after {
+  opacity: 1;
+}
+
+.add-to-cart {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.0);
+  color: white;
+  padding: 10px;
+  border: 2px solid white;
+  z-index: 2;
+}
+
+.product:hover .add-to-cart {
+  display: flex;
+  align-items: center;
 }
 
 .product__content {
   background: #F8F8F8;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
   padding: 24px 16px;
   gap: 16px;
+}
+
+.product__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
 }
 
 .product__text {
@@ -260,10 +302,9 @@ button {
   color: #5D5D5D;
 }
 
-.product__price{
+.product__price {
   color: #F16D7F;
 }
-
 
 
 .botton {
@@ -305,7 +346,55 @@ html, body {
   height: 100%;
 }
 
+.fone {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  height: 341px;
+  background: rgb(34, 34, 36);
+  padding: 236px 104px;
+  box-sizing: border-box;
+}
 
+.text_mini {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 33%;
+  max-width: 360px;
+}
+
+.image_mini {
+  width: 44.99px;
+  height: auto;
+  padding: 8px;
+}
+
+.content_mini {
+  margin-top: 10px;
+}
+
+.content_text_mini, .paragraph_mini {
+  color: rgb(251, 251, 251);
+  font-family: Lato;
+  padding: 16px ;
+}
+
+.content_text_mini {
+  font-size: 19.96px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.paragraph_mini {
+  font-size: 13.97px;
+  font-weight: 300;
+  line-height: 17px;
+  text-align: center;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .right_title {
