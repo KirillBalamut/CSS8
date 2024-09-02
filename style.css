@@ -402,17 +402,22 @@ html, body {
   color: #FBFBFB;
 }
 
-
 .subscribe_info {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 448px;
 }
 
 .sub__img {
   position: absolute;
-  width: 1598px;
-  height: 448px;
-  left: 2px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 0;
   top: 0;
+  filter: opacity(0.8);
 }
 
 .sub__img::after {
@@ -422,73 +427,59 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(244, 244, 244, 0.8);
   z-index: 1;
 }
 
-.face_img {
-position: absolute;
-width: 96px;
-height: auto;
-left:91px;
-top: -140px;
+.subscribe_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
 }
 
-.sub_txt{
+.face_img {
+  width: 96px;
+  height: auto;
+}
+
+.sub_txt {
   color: rgb(34, 34, 36);
   font-family: Lato;
   font-style: italic;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0%;
   text-align: center;
-
+  padding: 20px;
 }
 
-.subscribe_text {
-  position: absolute;
-  width: 359.45px;
-  height: 99px;
-  left: 230.29px;
-  top: 223px;
-  }
-
 .sub_email {
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  transform: translateY(-50%);
-  text-align: center;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  color: white;
+  margin-right: 230px;
+  z-index: 2;
 }
 
-
-
-.sub_email h3{
+.sub_email h3 {
   color: rgb(34, 34, 36);
-font-family: Lato;
-font-size: 24px;
-font-weight: 700;
-line-height: 167.2%;
-letter-spacing: 0%;
-text-align: center;
-
-
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 167.2%;
+  text-align: center;
 }
 
-.sub_email p{
+.sub_email p {
   color: rgb(34, 34, 36);
-font-family: Lato;
-font-size: 18px;
-font-weight: 400;
-line-height: 167.2%;
-letter-spacing: 0%;
-text-align: center;
-
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 167.2%;
+  text-align: center;
 }
 
 .email {
@@ -497,8 +488,6 @@ text-align: center;
   font-size: 18px;
   font-weight: 400;
   line-height: 167.2%;
-  letter-spacing: 0%;
-  text-align: center;
   width: 80%;
   margin-bottom: 10px;
 }
@@ -509,22 +498,19 @@ input[type="email"] {
   border-radius: 5px;
 }
 
-
 .sub_button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: rgb(34, 34, 36);
-    color: rgb(255, 255, 255);
-    font-family: Lato;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-    letter-spacing: 0%;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(34, 34, 36);
+  color: rgb(255, 255, 255);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -623,4 +609,12 @@ input[type="email"] {
   .botton {
     margin-bottom: 20px;
   }
+
+  .subscribe_info {
+    flex-direction: column;
+    align-items: center;
+  }
+.sub_email {
+    margin-right: 0;
+}
 }
