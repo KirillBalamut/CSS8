@@ -33,6 +33,10 @@ button {
   text-decoration: none;
 }
 
+.container{
+  max-width: 1600px;
+  margin: 0 auto;
+}
 
 .center {
   padding-left: calc(50% - 570px);
@@ -309,15 +313,15 @@ button {
 
 
 .botton {
-    position: absolute;
-    width: 134px;
-    height: 19px;
-    left: 50%;
-    transform: translateX(-60%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+  position: absolute;
+  width: 134px;
+  height: 19px;
+  left: 50%;
+  transform: translateX(-60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 
 .button_text {
@@ -349,16 +353,19 @@ html, body {
 
 .fone {
   background-color: #222222;
-  width: 1600px;
+
+  max-width: auto;
   height: 315px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 30px;
+  padding: 20px;
 }
 
 .text_mini {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -381,7 +388,7 @@ html, body {
 .content_text_mini, .paragraph_mini {
   color: rgb(251, 251, 251);
   font-family: Lato;
-  padding: 16px ;
+  padding: 16px;
 }
 
 .content_text_mini {
@@ -444,112 +451,148 @@ html, body {
 }
 
 .sub_txt {
-  color: rgb(34, 34, 36);
+  color: #222224;
   font-family: Lato;
   font-style: italic;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
   text-align: center;
-  padding: 20px;
+  padding:30px 230px;
 }
+
+sub_txt h3{
+  text-align: center;
+  line-height: 1.5;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 
 .sub_email {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  color: white;
-  margin-right: 230px;
+  margin-right: 15%;
   z-index: 2;
 }
 
 .sub_email h3 {
   color: rgb(34, 34, 36);
   font-family: Lato;
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 167.2%;
+  line-height: 1.67;
   text-align: center;
 }
 
 .sub_email p {
   color: rgb(34, 34, 36);
   font-family: Lato;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 400;
-  line-height: 167.2%;
+  line-height: 1.67;
   text-align: center;
+  padding: 0.1rem;
 }
 
 .email {
   color: rgb(34, 34, 36);
   font-family: Lato;
-  font-size: 18px;
+  width: 277px ;
+  height: 32px;
+  top: 243px;
   font-weight: 400;
-  line-height: 167.2%;
-  width: 80%;
-  margin-bottom: 10px;
+  background: rgba(244, 244, 244, 0.7);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
 }
 
 input[type="email"] {
-  padding: 10px;
+  padding: 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 1.5rem;
 }
 
 .sub_button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: rgb(34, 34, 36);
-  color: rgb(255, 255, 255);
-  font-family: Lato;
-  font-size: 14px;
-  font-weight: 400;
+  position: absolute;
+  width: 100px;
+  height: 62px;
+  left: 79.5%;
+  top: 242px;
+  background: rgb(241, 109, 127);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  text-align: center;
+  color: #FFFFFF;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
+.footer_info{
+position: relative;
 
+height: 79px;
+background: rgb(34, 34, 36);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+}
+
+.footer_text{
+  color: rgb(251, 251, 251);
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.footer_links{
+  display: flex;
+  gap: 7.5px;
+}
+
+.footer_links a{
+  display: inline-block;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding: 10px;
+  }
   .right_title {
-      font-size: 36px;
+    font-size: 36px;
   }
-
   .right_heading {
-      font-size: 24px;
+    font-size: 24px;
   }
-
   .color_text {
-      font-size: 28px;
+    font-size: 28px;
   }
-
   .sale {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
-
   .product-box__content {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-
   .product-box {
-      padding-bottom: 48px;
+    padding-bottom: 48px;
   }
-
   .button_text {
-      font-size: 14px;
-      padding: 10px 30px;
+    font-size: 14px;
+    padding: 10px 30px;
   }
-
   .sale__text, .sale__heading {
-      font-size: 18px;
+    font-size: 18px;
   }
-
   .botton {
     margin-bottom: 20px;
-}
+  }
 }
 
 @media (max-width: 767px) {
@@ -558,63 +601,66 @@ input[type="email"] {
     align-items: flex-start;
     padding: 10px;
   }
-
   .nav_left, .nav_right {
     gap: 20px;
   }
-
   .layer {
     flex-direction: column;
     padding: 0 20px;
   }
-
   .layer_img {
     width: 100%;
     order: 2;
   }
-
   .right_text {
     padding: 20px 0;
     text-align: center;
   }
-
   .right_text_info {
     margin-top: 20px;
     border-left: none;
     padding-left: 0;
   }
-
   .sale {
     grid-template-columns: 1fr;
     padding: 20px 0;
   }
-
   .sale__item {
     margin-bottom: 20px;
   }
-
   .product-box {
     padding-bottom: 48px;
   }
-
   .product-box__content {
     grid-template-columns: 1fr;
   }
-
   .button_text {
     font-size: 14px;
     padding: 10px 30px;
   }
-
   .botton {
     margin-bottom: 20px;
   }
-
   .subscribe_info {
     flex-direction: column;
     align-items: center;
+    padding: 20px;
   }
-.sub_email {
+  .sub__img {
+    height: auto;
+  }
+  .sub_email {
     margin-right: 0;
-}
+    width: 100%;
+  }
+  .sub_txt {
+    padding: 0 20px;
+  }
+  .email {
+    width: 90%;
+  }
+  .sub_button {
+    width: 90%;
+    margin-top: 10px;
+  }
 }
